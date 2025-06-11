@@ -45,40 +45,7 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Partículas flutuantes divinas */
-        .divine-particles {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: radial-gradient(circle, rgba(255,215,0,0.8) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: float-up 15s linear infinite;
-        }
-
-        @keyframes float-up {
-            from {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            to {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
+        /* Partículas removidas para melhor performance mobile */
 
         /* Container Principal */
         .main-container {
@@ -149,22 +116,6 @@
             }
         }
 
-        /* Aura Divina */
-        .divine-glow {
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,215,0,0.05) 0%, transparent 40%);
-            animation: rotate-glow 20s linear infinite;
-            pointer-events: none;
-        }
-
-        @keyframes rotate-glow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
 
         /* Barra de Progresso Estilizada */
         .progress-container {
@@ -283,54 +234,44 @@
 
         /* Barra de Urgência */
         .urgency-bar {
-            background: #fee;
-            border: 2px solid #ff3838;
-            border-radius: 50px;
-            padding: 15px;
+            background: #fff3cd;
+            border-left: 4px solid #ff3838;
+            border-radius: 8px;
+            padding: 12px 15px;
             margin: 20px 0;
             position: relative;
-            overflow: hidden;
-        }
-
-        .urgency-fill {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 15%;
-            background: linear-gradient(90deg, #ff3838, #ff6b6b);
-            opacity: 0.1;
-            animation: urgency-move 2s ease-in-out infinite;
-        }
-
-        @keyframes urgency-move {
-            0%, 100% { width: 15%; }
-            50% { width: 25%; }
+            box-shadow: 0 2px 8px rgba(255,56,56,0.1);
         }
 
         .urgency-bar p {
-            position: relative;
-            z-index: 1;
             margin: 0;
             text-align: center;
-            color: #ff3838;
-            font-weight: bold;
+            color: #d73502;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        @media (max-width: 480px) {
+            .urgency-bar p {
+                font-size: 14px;
+            }
         }
 
         /* Tipografia Aprimorada */
         h1 {
-            font-size: 28px;
+            font-size: 26px;
             color: #2d3436;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             text-align: center;
-            line-height: 1.3;
+            line-height: 1.35;
             font-weight: 700;
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 22px;
+                font-size: 20px;
                 margin-bottom: 15px;
+                line-height: 1.3;
             }
         }
 
@@ -365,13 +306,22 @@
         }
 
         .divine-message {
-            background: linear-gradient(135deg, #fff5f5, #fff9e6);
-            border-left: 4px solid #ffd93d;
-            padding: 20px;
+            background: #f8f9fa;
+            border-left: 4px solid #ff6b9d;
+            padding: 18px;
             margin: 20px 0;
-            border-radius: 10px;
+            border-radius: 8px;
             font-style: italic;
-            color: #5f3dc4;
+            color: #2d3436;
+            font-size: 15px;
+        }
+
+        @media (max-width: 480px) {
+            .divine-message {
+                padding: 15px;
+                margin: 15px 0;
+                font-size: 14px;
+            }
         }
 
         /* Opções de Resposta Melhoradas */
@@ -406,17 +356,17 @@
         .option:hover {
             background: #fff;
             border-color: #ff6b9d;
-            transform: translateX(5px);
-            box-shadow: 0 10px 30px rgba(255,107,157,0.15);
+            transform: translateX(2px);
+            box-shadow: 0 5px 15px rgba(255,107,157,0.15);
         }
 
         .option::before {
             content: '→';
             position: absolute;
-            right: 25px;
+            right: 20px;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 20px;
+            font-size: 18px;
             color: #ff6b9d;
             opacity: 0;
             transition: all 0.3s ease;
@@ -424,7 +374,18 @@
 
         .option:hover::before {
             opacity: 1;
-            right: 20px;
+            right: 15px;
+        }
+
+        @media (max-width: 480px) {
+            .option::before {
+                font-size: 16px;
+                right: 15px;
+            }
+            
+            .option:hover::before {
+                right: 12px;
+            }
         }
 
         /* Botões CTA Aprimorados */
@@ -511,20 +472,11 @@
         .whatsapp-mockup::before {
             content: 'WhatsApp';
             position: absolute;
-            top: 15px;
-            left: 20px;
+            top: 12px;
+            left: 15px;
             color: white;
             font-weight: bold;
-            font-size: 14px;
-        }
-
-        .whatsapp-mockup::after {
-            content: '•••';
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            color: white;
-            font-size: 20px;
+            font-size: 12px;
         }
 
         .whatsapp-screen {
@@ -557,12 +509,12 @@
         }
 
         .more-testimonials {
-            background: linear-gradient(135deg, #fff5f5, #ffeef2);
-            border-radius: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
             padding: 20px;
-            margin-top: 30px;
+            margin-top: 20px;
             text-align: center;
-            border: 2px dashed #ff6b9d;
+            border: 1px solid #e9ecef;
         }
 
         /* Depoimentos Animados */
@@ -623,30 +575,20 @@
         }
 
         .blessing-box {
-            background: linear-gradient(135deg, #fff5f5, #fff9e6);
-            border: 2px solid #ffd93d;
-            border-radius: 20px;
-            padding: 30px;
-            margin: 30px 0;
+            background: #f8f9fa;
+            border-left: 4px solid #ff6b9d;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
             position: relative;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
         @media (max-width: 480px) {
             .blessing-box {
-                padding: 20px;
-                margin: 20px 0;
+                padding: 15px;
+                margin: 15px 0;
             }
-        }
-
-        .blessing-box::before {
-            content: '🙏';
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 40px;
-            background: white;
-            padding: 0 15px;
         }
 
         /* Timer Urgência */
@@ -789,12 +731,19 @@
 
         /* Contador de Vendas */
         .sales-counter {
-            background: linear-gradient(135deg, #fff5f5, #ffeef2);
-            border-radius: 20px;
-            padding: 30px;
-            margin: 30px 0;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
             text-align: center;
-            border: 2px solid #ff6b9d;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        @media (max-width: 480px) {
+            .sales-counter {
+                padding: 20px;
+                margin: 20px 0;
+            }
         }
 
         .sales-counter h4 {
@@ -866,10 +815,17 @@
         /* WhatsApp Proof */
         .whatsapp-proof {
             background: #e3f2e1;
-            border-radius: 15px;
-            padding: 20px;
+            border-radius: 10px;
+            padding: 18px;
             margin: 20px 0;
             position: relative;
+            box-shadow: 0 2px 8px rgba(37,211,102,0.1);
+        }
+
+        @media (max-width: 480px) {
+            .whatsapp-proof {
+                padding: 15px;
+            }
         }
 
         .whatsapp-header {
@@ -1162,12 +1118,9 @@
     </style>
 </head>
 <body>
-    <!-- Partículas Divinas -->
-    <div class="divine-particles" id="particles"></div>
 
     <div class="main-container">
         <div class="quiz-container">
-            <div class="divine-glow"></div>
             
             <!-- Barra de Progresso -->
             <div class="progress-container">
@@ -1189,7 +1142,7 @@
                     <span id="activeUsers">287 pessoas</span> fazendo o quiz agora
                 </div>
 
-                <h1>🙏 Deus Tem um Propósito Especial Para Seu Casamento</h1>
+                <h1>Deus Tem um Propósito Especial Para Seu Casamento 🙏</h1>
                 
                 <div class="divine-message">
                     "Portanto, o que Deus uniu, ninguém separe." - Marcos 10:9
@@ -1203,7 +1156,6 @@
 
                 <!-- Barra de Urgência -->
                 <div class="urgency-bar">
-                    <div class="urgency-fill"></div>
                     <p>🔥 Apenas <strong id="spotsLeft">17</strong> vagas restantes com desconto hoje!</p>
                 </div>
 
@@ -1374,11 +1326,10 @@
                 <h1 class="result-title">✨ Deus Ouviu o Clamor do Seu Coração!</h1>
                 
                 <div class="blessing-box">
-                    <p style="font-size: 20px; color: #5f3dc4; margin-bottom: 15px;">
-                        <strong>"Eis que faço uma coisa nova, agora sairá à luz"</strong>
-                        <br>- Isaías 43:19
+                    <p style="font-size: 18px; color: #2d3436; margin-bottom: 10px; font-weight: 600;">
+                        "Eis que faço uma coisa nova, agora sairá à luz" - Isaías 43:19
                     </p>
-                    <p>
+                    <p style="font-size: 15px; line-height: 1.5; color: #636e72;">
                         O Senhor viu suas lágrimas e conhece sua dor. Ele tem um 
                         <strong>propósito maior</strong> para seu casamento!
                     </p>
@@ -1454,14 +1405,14 @@
                 </div>
 
                 <!-- Oferta Especial -->
-                <div style="background: #fff3cd; border: 2px solid #ffc107; border-radius: 20px; padding: 25px; margin: 30px 0;">
-                    <h3 style="color: #856404; margin-bottom: 15px;">
+                <div style="background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 8px; padding: 20px; margin: 25px 0;">
+                    <h3 style="color: #856404; margin-bottom: 10px; font-size: 18px;">
                         🎁 Oferta Especial Por Tempo Limitado!
                     </h3>
-                    <p style="font-size: 24px; color: #ff3838; font-weight: bold;">
+                    <p style="font-size: 22px; color: #ff3838; font-weight: bold; margin: 10px 0;">
                         De <s>R$ 97,00</s> por apenas R$ 39,90
                     </p>
-                    <p style="color: #856404; margin-top: 10px;">
+                    <p style="color: #856404; margin-top: 8px; font-size: 15px;">
                         Economize R$ 57,10 - Mais de 58% de desconto!
                     </p>
                 </div>
@@ -1491,8 +1442,8 @@
                     </div>
                 </div>
 
-                <div style="margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 15px;">
-                    <h4 style="margin-bottom: 15px;">O que você receberá imediatamente:</h4>
+                <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                    <h4 style="margin-bottom: 15px; font-size: 18px;">O que você receberá imediatamente:</h4>
                     <ul style="text-align: left; list-style: none; padding: 0;">
                         <li style="padding: 8px 0;">✅ eBook "Propósito de 21 Dias" (PDF)</li>
                         <li style="padding: 8px 0;">✅ Livro "O Poder Transformador da Oração e Jejum"</li>
@@ -1560,9 +1511,9 @@
                     </div>
                 </div>
 
-                <p style="margin-top: 30px; font-style: italic; color: #666;">
+                <div class="divine-message" style="margin-top: 30px; text-align: center;">
                     "Tudo posso naquele que me fortalece" - Filipenses 4:13
-                </p>
+                </div>
             </div>
         </div>
     </div>
@@ -1587,20 +1538,7 @@
             arrow.classList.toggle('open');
         }
 
-        // Criar partículas divinas
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 30;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 15 + 's';
-                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-                particlesContainer.appendChild(particle);
-            }
-        }
+        // Partículas removidas para melhor performance
 
         // Iniciar o quiz
         function startQuiz() {
@@ -1744,7 +1682,7 @@
 
         // Inicializar
         document.addEventListener('DOMContentLoaded', () => {
-            createParticles();
+            // Performance otimizada
             
             // Atualizar número de pessoas online dinamicamente
             setInterval(() => {
