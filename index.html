@@ -1,11 +1,1825 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#ff6b9d">
+    <meta name="description" content="Descubra o propósito de Deus para restaurar seu casamento em 21 dias. Junte-se a mais de 3.847 casais transformados.">
+    <title>Quiz Divino: Deus Tem um Propósito Para Seu Casamento</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)        
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1053551112909515');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1053551112909515&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(180deg, #fff5f7 0%, #ffeef2 50%, #fff 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Partículas flutuantes divinas */
+        .divine-particles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, rgba(255,215,0,0.8) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float-up 15s linear infinite;
+        }
+
+        @keyframes float-up {
+            from {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Container Principal */
+        .main-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 15px;
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 10px;
+            }
+        }
+
+        /* Header com Mockups */
+        .header-mockups {
+            display: none;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease;
+        }
+
+        .header-mockups.show {
+            display: block;
+        }
+
+        .mockup-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .mockup-item {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .mockup-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .mockup-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Quiz Container */
+        .quiz-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 480px) {
+            .quiz-container {
+                padding: 20px 15px;
+                border-radius: 15px;
+            }
+        }
+
+        /* Aura Divina */
+        .divine-glow {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,215,0,0.05) 0%, transparent 40%);
+            animation: rotate-glow 20s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotate-glow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Barra de Progresso Estilizada */
+        .progress-container {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 480px) {
+            .progress-container {
+                margin-bottom: 20px;
+            }
+        }
+
+        .progress-bar {
+            background: #f5f5f5;
+            height: 10px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress {
+            background: linear-gradient(90deg, #ff6b9d, #ffd93d);
+            height: 100%;
+            width: 0%;
+            border-radius: 20px;
+            transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(100%); }
+        }
+
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        @media (max-width: 480px) {
+            .step-indicator {
+                font-size: 10px;
+            }
+        }
+
+        /* Containers de Questões */
+        .question-container {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .question-container.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Indicador Social */
+        .social-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+            animation: fadeIn 1s ease;
+        }
+
+        .pulse-dot {
+            width: 10px;
+            height: 10px;
+            background: #25d366;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .pulse-dot::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #25d366;
+            border-radius: 50%;
+            animation: pulse-ring 1.5s ease-out infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        /* Barra de Urgência */
+        .urgency-bar {
+            background: #fee;
+            border: 2px solid #ff3838;
+            border-radius: 50px;
+            padding: 15px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .urgency-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 15%;
+            background: linear-gradient(90deg, #ff3838, #ff6b6b);
+            opacity: 0.1;
+            animation: urgency-move 2s ease-in-out infinite;
+        }
+
+        @keyframes urgency-move {
+            0%, 100% { width: 15%; }
+            50% { width: 25%; }
+        }
+
+        .urgency-bar p {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            text-align: center;
+            color: #ff3838;
+            font-weight: bold;
+        }
+
+        /* Tipografia Aprimorada */
+        h1 {
+            font-size: 28px;
+            color: #2d3436;
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #2d3436;
+            margin-bottom: 25px;
+            line-height: 1.4;
+            font-weight: 600;
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .subtitle {
+            color: #636e72;
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 480px) {
+            .subtitle {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .divine-message {
+            background: linear-gradient(135deg, #fff5f5, #fff9e6);
+            border-left: 4px solid #ffd93d;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            font-style: italic;
+            color: #5f3dc4;
+        }
+
+        /* Opções de Resposta Melhoradas */
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .option {
+            background: #f8f9fa;
+            border: 3px solid transparent;
+            padding: 18px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            line-height: 1.5;
+            position: relative;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        @media (max-width: 480px) {
+            .option {
+                padding: 15px;
+                font-size: 15px;
+            }
+        }
+
+        .option:hover {
+            background: #fff;
+            border-color: #ff6b9d;
+            transform: translateX(5px);
+            box-shadow: 0 10px 30px rgba(255,107,157,0.15);
+        }
+
+        .option::before {
+            content: '→';
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #ff6b9d;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .option:hover::before {
+            opacity: 1;
+            right: 20px;
+        }
+
+        /* Botões CTA Aprimorados */
+        .cta-button, .start-btn {
+            background: linear-gradient(135deg, #ff6b9d, #ff8787);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(255,107,157,0.3);
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        @media (max-width: 480px) {
+            .cta-button, .start-btn {
+                padding: 16px 30px;
+                font-size: 16px;
+            }
+        }
+
+        .cta-button:hover, .start-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,107,157,0.4);
+        }
+
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-button:active::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Seção de Depoimentos Visuais */
+        .testimonials-visual-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .testimonial-visual {
+            text-align: center;
+        }
+
+        .whatsapp-mockup {
+            background: #075e54;
+            border-radius: 20px;
+            padding: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 280px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 480px) {
+            .whatsapp-mockup {
+                max-width: 100%;
+                border-radius: 15px;
+            }
+        }
+
+        .whatsapp-mockup::before {
+            content: 'WhatsApp';
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .whatsapp-mockup::after {
+            content: '•••';
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .whatsapp-screen {
+            background: #e5ddd5;
+            border-radius: 15px;
+            margin-top: 35px;
+            overflow: hidden;
+            min-height: 350px;
+            position: relative;
+        }
+
+        @media (max-width: 480px) {
+            .whatsapp-screen {
+                min-height: 300px;
+                margin-top: 30px;
+            }
+        }
+
+        .whatsapp-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-caption {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #2d3436;
+            font-size: 16px;
+        }
+
+        .more-testimonials {
+            background: linear-gradient(135deg, #fff5f5, #ffeef2);
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+            border: 2px dashed #ff6b9d;
+        }
+
+        /* Depoimentos Animados */
+        .testimonial-visual {
+            animation: fadeInScale 0.8s ease backwards;
+        }
+
+        .testimonial-visual:nth-child(1) { animation-delay: 0.2s; }
+        .testimonial-visual:nth-child(2) { animation-delay: 0.4s; }
+        .testimonial-visual:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Seção de Resultado Aprimorada */
+        .result-container {
+            display: none;
+            text-align: center;
+        }
+
+        .result-container.show {
+            display: block;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .result-title {
+            font-size: 32px;
+            color: #ff6b9d;
+            margin-bottom: 25px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 480px) {
+            .result-title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .blessing-box {
+            background: linear-gradient(135deg, #fff5f5, #fff9e6);
+            border: 2px solid #ffd93d;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        @media (max-width: 480px) {
+            .blessing-box {
+                padding: 20px;
+                margin: 20px 0;
+            }
+        }
+
+        .blessing-box::before {
+            content: '🙏';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            background: white;
+            padding: 0 15px;
+        }
+
+        /* Timer Urgência */
+        .urgency-timer {
+            background: #ff3838;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 20px auto;
+            font-size: 18px;
+            font-weight: bold;
+            animation: pulse-timer 1s infinite;
+        }
+
+        @media (max-width: 480px) {
+            .urgency-timer {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+        }
+
+        @keyframes pulse-timer {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Garantias */
+        .guarantees {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .guarantee-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            color: #2d3436;
+        }
+
+        @media (max-width: 480px) {
+            .guarantee-item {
+                font-size: 14px;
+            }
+        }
+
+        .guarantee-icon {
+            font-size: 24px;
+        }
+
+        @media (max-width: 480px) {
+            .guarantee-icon {
+                font-size: 20px;
+            }
+        }
+
+        /* Seção de Benefícios */
+        .benefits-section {
+            margin: 30px 0;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        @media (max-width: 480px) {
+            .benefits-section {
+                margin: 20px 0;
+                padding: 20px 15px;
+            }
+        }
+
+        .benefits-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .benefit-icon {
+            font-size: 24px;
+            min-width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff5f7;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 480px) {
+            .benefit-icon {
+                font-size: 20px;
+                min-width: 35px;
+                height: 35px;
+            }
+        }
+
+        .benefit-text strong {
+            display: block;
+            color: #2d3436;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .benefit-text p {
+            margin: 0;
+            color: #636e72;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 480px) {
+            .benefit-text strong {
+                font-size: 15px;
+            }
+            
+            .benefit-text p {
+                font-size: 13px;
+            }
+        }
+
+        /* Contador de Vendas */
+        .sales-counter {
+            background: linear-gradient(135deg, #fff5f5, #ffeef2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+            border: 2px solid #ff6b9d;
+        }
+
+        .sales-counter h4 {
+            margin-bottom: 20px;
+            color: #2d3436;
+            font-size: 20px;
+        }
+
+        .counter-display {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .counter-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ff6b9d;
+            animation: count-up 2s ease-out;
+        }
+
+        @keyframes count-up {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .counter-label {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .counter-bar {
+            background: #f0f0f0;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .counter-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff6b9d, #ff3838);
+            border-radius: 10px;
+            transition: width 2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .counter-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        .counter-warning {
+            color: #ff3838;
+            font-weight: bold;
+            margin: 0;
+            animation: pulse 1s infinite;
+        }
+
+        /* WhatsApp Proof */
+        .whatsapp-proof {
+            background: #e3f2e1;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .whatsapp-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #075e54;
+        }
+
+        .whatsapp-icon {
+            width: 30px;
+            height: 30px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Notificação de Compra */
+        .purchase-notification {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 15px 20px;
+            max-width: 350px;
+            transform: translateX(-400px);
+            transition: transform 0.5s ease;
+            z-index: 1001;
+        }
+
+        .purchase-notification.show {
+            transform: translateX(0);
+        }
+
+        .notification-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: #2d3436;
+        }
+
+        .notification-icon {
+            font-size: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .guarantees {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .testimonials-visual-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Touch feedback para mobile */
+        @media (hover: none) {
+            .option:active {
+                background: #e9ecef;
+                transform: scale(0.98);
+            }
+            
+            .cta-button:active, .start-btn:active {
+                transform: scale(0.98);
+            }
+        }
+
+        /* Steps de Ação */
+        .action-steps {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .step-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #ff6b9d, #ff8787);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+
+        /* Floating Action */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(37,211,102,0.3);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            z-index: 1000;
+            animation: slideInUp 0.5s ease;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 769px) {
+            .floating-cta {
+                left: auto;
+            }
+        }
+
+        .floating-cta.show {
+            display: flex;
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 20px;
+        }
+
+        .faq-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            color: #2d3436;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+
+        .faq-arrow {
+            transition: transform 0.3s ease;
+            color: #ff6b9d;
+        }
+
+        .faq-arrow.open {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .faq-answer.show {
+            max-height: 100px;
+            padding: 0 20px 20px;
+        }
+
+        /* Loading Animation */
+        .loading-divine {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .loading-divine.show {
+            display: block;
+        }
+
+        .loading-hands {
+            font-size: 60px;
+            animation: pray 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pray {
+            0%, 100% { transform: scale(1) rotate(-5deg); }
+            50% { transform: scale(1.1) rotate(5deg); }
+        }
+
+        .loading-text {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #666;
+            font-style: italic;
+        }
+        /* Animações de Entrada */
+        .product-gallery {
+            animation: fadeInUp 0.8s ease backwards;
+            animation-delay: 0.3s;
+        }
+
+        .divine-message {
+            animation: fadeInScale 0.8s ease backwards;
+            animation-delay: 0.2s;
+        }
+
+        .urgency-bar {
+            animation: slideInLeft 0.8s ease backwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Partículas Divinas -->
+    <div class="divine-particles" id="particles"></div>
+
+    <div class="main-container">
+        <div class="quiz-container">
+            <div class="divine-glow"></div>
+            
+            <!-- Barra de Progresso -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <div class="step-indicator">
+                    <span>Início</span>
+                    <span>Descoberta</span>
+                    <span>Revelação</span>
+                </div>
+            </div>
+
+            <!-- Tela Inicial com Mockups -->
+            <div class="question-container active" id="intro">
+                <!-- Indicador Social -->
+                <div class="social-indicator">
+                    <div class="pulse-dot"></div>
+                    <span id="activeUsers">287 pessoas</span> fazendo o quiz agora
+                </div>
+
+                <h1>🙏 Deus Tem um Propósito Especial Para Seu Casamento</h1>
+                
+                <div class="divine-message">
+                    "Portanto, o que Deus uniu, ninguém separe." - Marcos 10:9
+                </div>
+
+                <p class="subtitle">
+                    Responda 7 perguntas guiadas pelo Espírito Santo e descubra como 
+                    <strong>3.847 casais</strong> já viveram o milagre da restauração através 
+                    do <strong>Propósito de 21 Dias</strong>.
+                </p>
+
+                <!-- Barra de Urgência -->
+                <div class="urgency-bar">
+                    <div class="urgency-fill"></div>
+                    <p>🔥 Apenas <strong id="spotsLeft">17</strong> vagas restantes com desconto hoje!</p>
+                </div>
+
+                <!-- O que você receberá -->
+                <div class="benefits-section">
+                    <h3 style="text-align: center; color: #ff6b9d; margin-bottom: 20px;">✨ O que você receberá:</h3>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">📖</span>
+                            <div class="benefit-text">
+                                <strong>Livro Digital "Propósito de 21 Dias"</strong>
+                                <p>Guia completo com orações diárias e reflexões bíblicas</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🙏</span>
+                            <div class="benefit-text">
+                                <strong>Vídeos de Oração Guiada</strong>
+                                <p>21 vídeos com pastores para fortalecer sua fé</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🕊️</span>
+                            <div class="benefit-text">
+                                <strong>Guia de Jejum e Oração</strong>
+                                <p>Como jejuar corretamente para resultados poderosos</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">💬</span>
+                            <div class="benefit-text">
+                                <strong>Acesso ao Grupo de Apoio</strong>
+                                <p>Comunidade com +3.800 pessoas em oração</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="start-btn" onclick="startQuiz()">
+                    Iniciar Jornada de Transformação 🙏
+                </button>
+
+                <p style="margin-top: 20px; color: #666; font-size: 14px; text-align: center;">
+                    ⏱️ Leva apenas 2 minutos | 📱 367 pessoas no grupo agora
+                </p>
+            </div>
+
+            <!-- Pergunta 1 -->
+            <div class="question-container" id="q1">
+                <h2>💔 Como está seu coração em relação ao seu casamento hoje?</h2>
+                <div class="options">
+                    <div class="option" onclick="nextQuestion(2, 'broken')">
+                        Completamente partido, sinto que perdi tudo
+                    </div>
+                    <div class="option" onclick="nextQuestion(2, 'hurt')">
+                        Machucado e confuso, não sei mais o que fazer
+                    </div>
+                    <div class="option" onclick="nextQuestion(2, 'hopeful')">
+                        Ainda tenho esperança, mas preciso de direção divina
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="question-container" id="q2">
+                <h2>🕊️ Você tem buscado a Deus neste momento difícil?</h2>
+                <div class="options">
+                    <div class="option" onclick="nextQuestion(3, 'daily')">
+                        Sim, oro todos os dias pela restauração
+                    </div>
+                    <div class="option" onclick="nextQuestion(3, 'sometimes')">
+                        Às vezes, mas sinto que minhas orações não são ouvidas
+                    </div>
+                    <div class="option" onclick="nextQuestion(3, 'struggling')">
+                        Tenho dificuldade, a dor é muito grande
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="question-container" id="q3">
+                <h2>😔 Qual é a maior ferida no seu relacionamento agora?</h2>
+                <div class="options">
+                    <div class="option" onclick="nextQuestion(4, 'abandonment')">
+                        Me sinto abandonado(a) e rejeitado(a)
+                    </div>
+                    <div class="option" onclick="nextQuestion(4, 'betrayal')">
+                        A confiança foi quebrada e não sei como perdoar
+                    </div>
+                    <div class="option" onclick="nextQuestion(4, 'coldness')">
+                        A frieza tomou conta, não há mais amor
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="question-container" id="q4">
+                <h2>⏰ Há quanto tempo vocês estão enfrentando essa crise?</h2>
+                <div class="options">
+                    <div class="option" onclick="nextQuestion(5, 'recent')">
+                        Menos de 6 meses - ainda é recente
+                    </div>
+                    <div class="option" onclick="nextQuestion(5, 'months')">
+                        Entre 6 meses e 1 ano - está piorando
+                    </div>
+                    <div class="option" onclick="nextQuestion(5, 'years')">
+                        Mais de 1 ano - parece não ter solução
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div class="question-container" id="q5">
+                <h2>✝️ Você acredita que Deus pode fazer um milagre no seu casamento?</h2>
+                <div class="options">
+                    <div class="option" onclick="nextQuestion(6, 'absolutely')">
+                        Sim! Eu creio no poder de Deus para restaurar
+                    </div>
+                    <div class="option" onclick="nextQuestion(6, 'wanting')">
+                        Quero acreditar, mas minha fé está abalada
+                    </div>
+                    <div class="option" onclick="nextQuestion(6, 'unsure')">
+                        Não sei mais no que acreditar
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 6 -->
+            <div class="question-container" id="q6">
+                <h2>💑 Se Deus te desse uma nova chance, o que você faria diferente?</h2>
+                <div class="options">
+                    <div class="option" onclick="nextQuestion(7, 'everything')">
+                        Tudo! Colocaria Deus no centro do nosso lar
+                    </div>
+                    <div class="option" onclick="nextQuestion(7, 'love')">
+                        Amaria mais, perdoaria mais, seria mais paciente
+                    </div>
+                    <div class="option" onclick="nextQuestion(7, 'learn')">
+                        Aprenderia a ser o cônjuge que Deus quer que eu seja
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 7 -->
+            <div class="question-container" id="q7">
+                <h2>🙏 Se existisse um caminho bíblico de 21 dias para restaurar seu casamento, você seguiria?</h2>
+                <div class="options">
+                    <div class="option" onclick="showResult('committed')">
+                        SIM! Faria qualquer sacrifício para salvar meu casamento
+                    </div>
+                    <div class="option" onclick="showResult('ready')">
+                        Sim, estou pronto(a) para lutar pelo amor da minha vida
+                    </div>
+                    <div class="option" onclick="showResult('willing')">
+                        Sim, se isso significa ter minha família restaurada
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Divino -->
+            <div class="loading-divine" id="loading">
+                <div class="loading-hands">🙏</div>
+                <p class="loading-text">Deus está preparando uma palavra especial para você...</p>
+            </div>
+
+            <!-- Resultado -->
+            <div class="result-container" id="result">
+                <h1 class="result-title">✨ Deus Ouviu o Clamor do Seu Coração!</h1>
+                
+                <div class="blessing-box">
+                    <p style="font-size: 20px; color: #5f3dc4; margin-bottom: 15px;">
+                        <strong>"Eis que faço uma coisa nova, agora sairá à luz"</strong>
+                        <br>- Isaías 43:19
+                    </p>
+                    <p>
+                        O Senhor viu suas lágrimas e conhece sua dor. Ele tem um 
+                        <strong>propósito maior</strong> para seu casamento!
+                    </p>
+                </div>
+
+                <!-- Depoimentos Reais com Imagens -->
+                <div class="testimonials-section">
+                    <div class="testimonial-header">
+                        <h3>📱 Prints Reais do Nosso Grupo de Apoio:</h3>
+                        <p style="color: #666; margin-top: 10px;">Veja os milagres acontecendo AGORA!</p>
+                    </div>
+                    <div class="testimonials-visual-grid">
+                        <div class="testimonial-visual">
+                            <div class="whatsapp-mockup">
+                                <div class="whatsapp-screen">
+                                    <!-- Feedback 1 -->
+                                    <img src="Feedbacks/IMG_3934.jpeg" alt="Depoimento WhatsApp 1">
+                                </div>
+                            </div>
+                            <p class="testimonial-caption">Reconciliação após meses!</p>
+                        </div>
+                        
+                        <div class="testimonial-visual">
+                            <div class="whatsapp-mockup">
+                                <div class="whatsapp-screen">
+                                    <!-- Feedback 2 -->
+                                    <img src="Feedbacks/IMG_3935.jpeg" alt="Depoimento WhatsApp 2">
+                                </div>
+                            </div>
+                            <p class="testimonial-caption">Divórcio cancelado!</p>
+                        </div>
+
+                        <div class="testimonial-visual">
+                            <div class="whatsapp-mockup">
+                                <div class="whatsapp-screen">
+                                    <!-- Feedback 3 -->
+                                    <img src="Feedbacks/IMG_3936.jpeg" alt="Depoimento WhatsApp 3">
+                                </div>
+                            </div>
+                            <p class="testimonial-caption">Milagres no 4º dia!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="more-testimonials">
+                        <p style="text-align: center; color: #ff6b9d; font-weight: bold; margin-top: 20px;">
+                            + 3.847 testemunhos de restauração! 🙏
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contador de Vendas Hoje -->
+                <div class="sales-counter">
+                    <h4>🔥 Casais Transformados Hoje:</h4>
+                    <div class="counter-display">
+                        <span class="counter-number" id="salesCount">127</span>
+                        <span class="counter-label">de 150 vagas</span>
+                    </div>
+                    <div class="counter-bar">
+                        <div class="counter-fill" style="width: 85%;"></div>
+                    </div>
+                    <p class="counter-warning">⚠️ Restam apenas 23 vagas com desconto!</p>
+                </div>
+
+                <!-- WhatsApp Proof -->
+                <div class="whatsapp-proof">
+                    <div class="whatsapp-header">
+                        <div class="whatsapp-icon">💬</div>
+                        <span>Grupo Propósito de 21 Dias - 367 participantes ativos</span>
+                    </div>
+                    <p style="color: #075e54;">
+                        "Todas nós com fé em Deus 🙏" - Mensagem mais recente
+                    </p>
+                </div>
+
+                <!-- Oferta Especial -->
+                <div style="background: #fff3cd; border: 2px solid #ffc107; border-radius: 20px; padding: 25px; margin: 30px 0;">
+                    <h3 style="color: #856404; margin-bottom: 15px;">
+                        🎁 Oferta Especial Por Tempo Limitado!
+                    </h3>
+                    <p style="font-size: 24px; color: #ff3838; font-weight: bold;">
+                        De <s>R$ 97,00</s> por apenas R$ 39,90
+                    </p>
+                    <p style="color: #856404; margin-top: 10px;">
+                        Economize R$ 57,10 - Mais de 58% de desconto!
+                    </p>
+                </div>
+
+                <div class="urgency-timer" id="timer">
+                    ⏰ Oferta termina em: 09:47
+                </div>
+
+                <div style="margin: 30px 0; text-align: center;">
+                    <a href="https://pay.kiwify.com.br/05bJd1z?afid=CqUYXff1" class="cta-button">
+                        QUERO RESTAURAR MEU CASAMENTO AGORA 🙏
+                    </a>
+                </div>
+
+                <div class="guarantees">
+                    <div class="guarantee-item">
+                        <span class="guarantee-icon">🔒</span>
+                        <span>Compra 100% Segura</span>
+                    </div>
+                    <div class="guarantee-item">
+                        <span class="guarantee-icon">📱</span>
+                        <span>Acesso Imediato</span>
+                    </div>
+                    <div class="guarantee-item">
+                        <span class="guarantee-icon">✅</span>
+                        <span>7 Dias de Garantia</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 15px;">
+                    <h4 style="margin-bottom: 15px;">O que você receberá imediatamente:</h4>
+                    <ul style="text-align: left; list-style: none; padding: 0;">
+                        <li style="padding: 8px 0;">✅ eBook "Propósito de 21 Dias" (PDF)</li>
+                        <li style="padding: 8px 0;">✅ Livro "O Poder Transformador da Oração e Jejum"</li>
+                        <li style="padding: 8px 0;">✅ Vídeos de Oração Guiada</li>
+                        <li style="padding: 8px 0;">✅ Cronograma Diário de Atividades</li>
+                        <li style="padding: 8px 0;">✅ Acesso à Comunidade de Apoio</li>
+                    </ul>
+                </div>
+
+                <div class="action-steps">
+                    <h3 style="margin: 30px 0 20px; color: #ff6b9d;">
+                        🎯 Próximos Passos Para Sua Restauração:
+                    </h3>
+                    <div class="steps-grid">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <p>Clique no botão abaixo e garanta seu acesso</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <p>Receba todo o material em seu email instantaneamente</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <p>Comece hoje mesmo sua jornada de 21 dias com Deus</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Rápido -->
+                <div class="faq-section">
+                    <h3 style="text-align: center; margin-bottom: 20px; color: #2d3436;">
+                        ❓ Perguntas Frequentes
+                    </h3>
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(1)">
+                                <span>Quanto tempo tenho acesso ao material?</span>
+                                <span class="faq-arrow" id="arrow1">▼</span>
+                            </div>
+                            <div class="faq-answer" id="faq1">
+                                Acesso vitalício! Uma vez adquirido, o material é seu para sempre.
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(2)">
+                                <span>E se meu cônjuge não quiser participar?</span>
+                                <span class="faq-arrow" id="arrow2">▼</span>
+                            </div>
+                            <div class="faq-answer" id="faq2">
+                                O propósito foi criado para ser feito individualmente. Deus trabalha primeiro em você!
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(3)">
+                                <span>Tem garantia de devolução?</span>
+                                <span class="faq-arrow" id="arrow3">▼</span>
+                            </div>
+                            <div class="faq-answer" id="faq3">
+                                Sim! 7 dias de garantia total. Se não gostar, devolvemos 100% do valor.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p style="margin-top: 30px; font-style: italic; color: #666;">
+                    "Tudo posso naquele que me fortalece" - Filipenses 4:13
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Flutuante -->
+    <a href="https://pay.kiwify.com.br/05bJd1z?afid=CqUYXff1" class="floating-cta" id="floatingCta">
+        <span>🙏</span>
+        <span>Quero Meu Propósito Agora</span>
+    </a>
+
+    <script>
+        // Variáveis globais
+        let currentQuestion = 0;
+        let answers = [];
+
+        // FAQ Toggle
+        function toggleFaq(num) {
+            const answer = document.getElementById(`faq${num}`);
+            const arrow = document.getElementById(`arrow${num}`);
+            
+            answer.classList.toggle('show');
+            arrow.classList.toggle('open');
+        }
+
+        // Criar partículas divinas
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Iniciar o quiz
+        function startQuiz() {
+            document.getElementById('intro').classList.remove('active');
+            setTimeout(() => {
+                document.getElementById('q1').classList.add('active');
+                currentQuestion = 1;
+                updateProgress();
+            }, 300);
+        }
+
+        // Próxima pergunta
+        function nextQuestion(next, answer) {
+            answers.push(answer);
+            
+            // Esconde pergunta atual
+            document.getElementById(`q${currentQuestion}`).classList.remove('active');
+            
+            // Pequeno delay para transição suave
+            setTimeout(() => {
+                if (next <= 7) {
+                    document.getElementById(`q${next}`).classList.add('active');
+                    currentQuestion = next;
+                    updateProgress();
+                }
+            }, 300);
+        }
+
+        // Atualizar barra de progresso
+        function updateProgress() {
+            const progressPercent = (currentQuestion / 7) * 100;
+            document.getElementById('progress').style.width = progressPercent + '%';
+        }
+
+        // Mostrar resultado
+        function showResult(finalAnswer) {
+            answers.push(finalAnswer);
+            
+            // Esconde última pergunta
+            document.getElementById('q7').classList.remove('active');
+            
+            // Mostra loading
+            setTimeout(() => {
+                document.getElementById('loading').classList.add('show');
+            }, 300);
+            
+            // Mostra resultado após loading
+            setTimeout(() => {
+                document.getElementById('loading').classList.remove('show');
+                setTimeout(() => {
+                    document.getElementById('result').classList.add('show');
+                    updateProgress();
+                    startTimer();
+                    showFloatingCTA();
+                    trackConversion();
+                }, 500);
+            }, 3000);
+        }
+
+        // Timer de urgência
+        function startTimer() {
+            let minutes = 9;
+            let seconds = 47;
+            
+            const timerInterval = setInterval(() => {
+                seconds--;
+                if (seconds < 0) {
+                    minutes--;
+                    seconds = 59;
+                }
+                
+                if (minutes < 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById('timer').innerHTML = '⏰ Oferta expirada!';
+                    return;
+                }
+                
+                const formattedTime = `⏰ Oferta termina em: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                document.getElementById('timer').innerHTML = formattedTime;
+                
+                // Piscar quando restam menos de 2 minutos
+                if (minutes < 2) {
+                    document.getElementById('timer').style.animation = 'pulse-timer 0.5s infinite';
+                }
+            }, 1000);
+        }
+
+        // Mostrar CTA flutuante
+        function showFloatingCTA() {
+            setTimeout(() => {
+                document.getElementById('floatingCta').classList.add('show');
+            }, 5000);
+        }
+
+        // Rastrear conversão e animar contador
+        function trackConversion() {
+            // Facebook Pixel - Quiz Completed
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    value: 39.90,
+                    currency: 'BRL',
+                    content_name: 'Quiz Propósito 21 Dias'
+                });
+            }
+            
+            console.log('Quiz completado:', answers);
+            
+            // Animar contador de vendas
+            let currentCount = 127;
+            const countElement = document.getElementById('salesCount');
+            const targetCount = 127 + Math.floor(Math.random() * 5);
+            
+            // Simular vendas aumentando
+            setInterval(() => {
+                if (currentCount < 148 && Math.random() > 0.8) {
+                    currentCount++;
+                    if (countElement) {
+                        countElement.textContent = currentCount;
+                        countElement.style.animation = 'count-up 0.5s ease';
+                        setTimeout(() => {
+                            countElement.style.animation = '';
+                        }, 500);
+                    }
+                    
+                    // Atualizar barra
+                    const fill = document.querySelector('.counter-fill');
+                    if (fill) {
+                        const percentage = (currentCount / 150) * 100;
+                        fill.style.width = percentage + '%';
+                    }
+                    
+                    // Atualizar vagas restantes
+                    const remaining = 150 - currentCount;
+                    const warning = document.querySelector('.counter-warning');
+                    if (warning) {
+                        warning.textContent = `⚠️ Restam apenas ${remaining} vagas com desconto!`;
+                    }
+                }
+            }, 10000);
+        }
+
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            
+            // Atualizar número de pessoas online dinamicamente
+            setInterval(() => {
+                const online = 250 + Math.floor(Math.random() * 100);
+                const activeElement = document.getElementById('activeUsers');
+                if (activeElement) {
+                    activeElement.textContent = online + ' pessoas';
+                }
+            }, 4000);
+            
+            // Atualizar vagas restantes
+            let spots = 17;
+            setInterval(() => {
+                if (spots > 3 && Math.random() > 0.7) {
+                    spots--;
+                    const spotsElement = document.getElementById('spotsLeft');
+                    if (spotsElement) {
+                        spotsElement.textContent = spots;
+                        // Piscar quando ficar menor que 10
+                        if (spots < 10) {
+                            spotsElement.style.animation = 'pulse 0.5s';
+                            setTimeout(() => {
+                                spotsElement.style.animation = '';
+                            }, 500);
+                        }
+                    }
+                }
+            }, 8000);
+            
+            // Adicionar notificação de compra
+            setTimeout(() => {
+                showPurchaseNotification();
+            }, 15000);
+        });
+
+        // Mostrar notificação de compra
+        function showPurchaseNotification() {
+            const names = ['Maria', 'Ana', 'João', 'Pedro', 'Carla', 'Lucas', 'Júlia', 'Paulo'];
+            const cities = ['São Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Salvador', 'Fortaleza'];
+            
+            const notification = document.createElement('div');
+            notification.className = 'purchase-notification';
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <span class="notification-icon">✅</span>
+                    <span><strong>${names[Math.floor(Math.random() * names.length)]}</strong> de ${cities[Math.floor(Math.random() * cities.length)]} acabou de adquirir o Propósito!</span>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    notification.remove();
+                }, 500);
+            }, 5000);
+            
+            // Repetir a cada 30-60 segundos
+            setTimeout(() => {
+                showPurchaseNotification();
+            }, 30000 + Math.random() * 30000);
+        }
+
+        // Prevenir saída da página
+        window.addEventListener('beforeunload', (e) => {
+            if (currentQuestion > 0 && currentQuestion < 7) {
+                e.preventDefault();
+                e.returnValue = 'Você tem certeza? Seu progresso será perdido!';
+            }
+        });
+    </script>
 </body>
-</html>
+</html> 
