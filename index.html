@@ -407,6 +407,31 @@
             -webkit-tap-highlight-color: transparent;
             width: 100%;
             max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .start-btn.main-cta {
+            padding: 22px 40px;
+            font-size: 20px;
+            background: linear-gradient(135deg, #ff3838, #ff6b9d);
+            box-shadow: 0 15px 40px rgba(255,56,56,0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            max-width: 100%;
+        }
+
+        .cta-text {
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-subtext {
+            font-size: 14px;
+            font-weight: 400;
+            opacity: 0.9;
         }
 
         @media (max-width: 480px) {
@@ -414,14 +439,109 @@
                 padding: 16px 30px;
                 font-size: 16px;
             }
+            
+            .start-btn.main-cta {
+                padding: 18px 30px;
+            }
+            
+            .cta-text {
+                font-size: 17px;
+            }
+            
+            .cta-subtext {
+                font-size: 13px;
+            }
+        }
+
+        /* Wrapper do CTA */
+        .cta-wrapper {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .cta-security {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .cta-security span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Animação de pulso */
+        .pulse-animation {
+            animation: pulse 2s infinite;
+            position: relative;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 10px 30px rgba(255,107,157,0.3);
+            }
+            50% {
+                box-shadow: 0 10px 40px rgba(255,107,157,0.5);
+                transform: scale(1.02);
+            }
+            100% {
+                box-shadow: 0 10px 30px rgba(255,107,157,0.3);
+            }
+        }
+
+        /* Top CTA Wrapper */
+        .top-cta-wrapper {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        /* Badge de oferta limitada */
+        .limited-offer-badge {
+            background: #ff3838;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+            animation: badge-pulse 1.5s infinite;
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes badge-pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.9;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .limited-offer-badge {
+                font-size: 11px;
+                padding: 6px 12px;
+            }
         }
 
         .cta-button:hover, .start-btn:hover {
-            transform: translateY(-3px);
+            transform: translateY(-3px) scale(1.02);
             box-shadow: 0 15px 40px rgba(255,107,157,0.4);
         }
 
-        .cta-button::after {
+        .start-btn:active {
+            transform: translateY(-1px) scale(0.98);
+        }
+
+        .cta-button::after, .start-btn::after {
             content: '';
             position: absolute;
             top: 50%;
@@ -434,9 +554,19 @@
             transition: width 0.6s, height 0.6s;
         }
 
-        .cta-button:active::after {
+        .cta-button:active::after, .start-btn:active::after {
             width: 300px;
             height: 300px;
+        }
+
+        /* Botão verde WhatsApp */
+        .secondary-cta {
+            background: linear-gradient(135deg, #25d366, #128c7e) !important;
+            box-shadow: 0 10px 30px rgba(37,211,102,0.3) !important;
+        }
+
+        .secondary-cta:hover {
+            box-shadow: 0 15px 40px rgba(37,211,102,0.4) !important;
         }
 
         /* Seção de Depoimentos Visuais */
@@ -1144,6 +1274,16 @@
 
                 <h1>Deus Tem um Propósito Especial Para Seu Casamento 🙏</h1>
                 
+                <!-- Botão Topo -->
+                <div class="top-cta-wrapper">
+                    <button class="start-btn pulse-animation" onclick="startQuiz()">
+                        DESCOBRIR MEU PROPÓSITO AGORA ✨
+                    </button>
+                    <p style="margin: 8px 0 0 0; font-size: 12px; color: #666;">
+                        🔥 127 pessoas começaram o quiz nos últimos 30 minutos
+                    </p>
+                </div>
+                
                 <div class="divine-message">
                     "Portanto, o que Deus uniu, ninguém separe." - Marcos 10:9
                 </div>
@@ -1194,13 +1334,24 @@
                     </div>
                 </div>
 
-                <button class="start-btn" onclick="startQuiz()">
-                    Iniciar Jornada de Transformação 🙏
-                </button>
+                <!-- Botão Principal com destaque -->
+                <div class="cta-wrapper">
+                    <div class="limited-offer-badge">
+                        🔥 ÚLTIMAS 17 VAGAS COM DESCONTO
+                    </div>
+                    <button class="start-btn main-cta" onclick="startQuiz()">
+                        <span class="cta-text">QUERO RESTAURAR MEU CASAMENTO</span>
+                        <span class="cta-subtext">Começar Quiz Gratuito →</span>
+                    </button>
+                    <p class="cta-security">
+                        <span>🔒 100% Seguro</span> • <span>⚡ Resultado Imediato</span>
+                    </p>
+                </div>
 
-                <p style="margin-top: 20px; color: #666; font-size: 14px; text-align: center;">
+                <p style="margin-top: 15px; color: #666; font-size: 14px; text-align: center;">
                     ⏱️ Leva apenas 2 minutos | 📱 367 pessoas no grupo agora
                 </p>
+                
             </div>
 
             <!-- Pergunta 1 -->
