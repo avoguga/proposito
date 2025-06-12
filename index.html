@@ -1264,205 +1264,144 @@
                 </div>
             </div>
 
-            <!-- Tela Inicial com Mockups -->
+            <!-- Tela Inicial Simplificada -->
             <div class="question-container active" id="intro">
-                <!-- Indicador Social -->
+                <!-- Hook Forte -->
+                <h1 style="font-size: 28px; color: #ff3838; margin-bottom: 15px; font-weight: 900;">⚡ RECONQUISTE SEU AMOR EM 21 DIAS</h1>
+                
+                <!-- Preço Destaque -->
+                <div style="background: linear-gradient(135deg, #ff3838, #ff6b9d); color: white; padding: 12px 25px; border-radius: 25px; display: inline-block; margin-bottom: 20px; font-size: 18px; font-weight: bold;">
+                    🔥 Apenas R$ 30,00 hoje!
+                </div>
+
+                <!-- Social Proof Rápida -->
                 <div class="social-indicator">
                     <div class="pulse-dot"></div>
-                    <span id="activeUsers">287 pessoas</span> fazendo o quiz agora
+                    <span id="activeUsers">287 pessoas</span> fazendo o teste agora
                 </div>
 
-                <h1>Deus Tem um Propósito Especial Para Seu Casamento 🙏</h1>
-                
-                <!-- Botão Topo -->
-                <div class="top-cta-wrapper">
-                    <button class="start-btn pulse-animation" onclick="startQuiz()">
-                        DESCOBRIR MEU PROPÓSITO AGORA ✨
-                    </button>
-                    <p style="margin: 8px 0 0 0; font-size: 12px; color: #666;">
-                        🔥 127 pessoas começaram o quiz nos últimos 30 minutos
-                    </p>
-                </div>
-                
-                <div class="divine-message">
-                    "Portanto, o que Deus uniu, ninguém separe." - Marcos 10:9
-                </div>
-
-                <p class="subtitle">
-                    Responda 7 perguntas guiadas pelo Espírito Santo e descubra como 
-                    <strong>3.847 casais</strong> já viveram o milagre da restauração através 
-                    do <strong>Propósito de 21 Dias</strong>.
+                <!-- Promessa Clara -->
+                <p class="subtitle" style="font-size: 18px; font-weight: 600; color: #2d3436; margin-bottom: 25px;">
+                    Descubra em 5 perguntas rápidas se você pode reconquistar seu amor perdido com o método que já salvou <strong>3.847 casamentos</strong>.
                 </p>
 
-                <!-- Barra de Urgência -->
-                <div class="urgency-bar">
-                    <p>🔥 Apenas <strong id="spotsLeft">17</strong> vagas restantes com desconto hoje!</p>
-                </div>
+                <!-- CTA Principal -->
+                <button class="start-btn main-cta pulse-animation" onclick="startQuiz()" style="font-size: 22px; padding: 20px 40px;">
+                    <span class="cta-text">🙏 INICIAR TESTE GRATUITO</span>
+                </button>
 
-                <!-- O que você receberá -->
-                <div class="benefits-section">
-                    <h3 style="text-align: center; color: #ff6b9d; margin-bottom: 20px;">✨ O que você receberá:</h3>
-                    <div class="benefits-list">
-                        <div class="benefit-item">
-                            <span class="benefit-icon">📖</span>
-                            <div class="benefit-text">
-                                <strong>Livro Digital "Propósito de 21 Dias"</strong>
-                                <p>Guia completo com orações diárias e reflexões bíblicas</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <span class="benefit-icon">🙏</span>
-                            <div class="benefit-text">
-                                <strong>Vídeos de Oração Guiada</strong>
-                                <p>21 vídeos com pastores para fortalecer sua fé</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <span class="benefit-icon">🕊️</span>
-                            <div class="benefit-text">
-                                <strong>Guia de Jejum e Oração</strong>
-                                <p>Como jejuar corretamente para resultados poderosos</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <span class="benefit-icon">💬</span>
-                            <div class="benefit-text">
-                                <strong>Acesso ao Grupo de Apoio</strong>
-                                <p>Comunidade com +3.800 pessoas em oração</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Botão Principal com destaque -->
-                <div class="cta-wrapper">
-                    <div class="limited-offer-badge">
-                        🔥 ÚLTIMAS 17 VAGAS COM DESCONTO
-                    </div>
-                    <button class="start-btn main-cta" onclick="startQuiz()">
-                        <span class="cta-text">QUERO RESTAURAR MEU CASAMENTO</span>
-                        <span class="cta-subtext">Começar Quiz Gratuito →</span>
-                    </button>
-                    <p class="cta-security">
-                        <span>🔒 100% Seguro</span> • <span>⚡ Resultado Imediato</span>
-                    </p>
-                </div>
-
-                <p style="margin-top: 15px; color: #666; font-size: 14px; text-align: center;">
-                    ⏱️ Leva apenas 2 minutos | 📱 367 pessoas no grupo agora
+                <p style="margin-top: 12px; color: #666; font-size: 13px; text-align: center;">
+                    ⏱️ 2 minutos • 🔒 100% Gratuito • ⚡ Resultado Imediato
                 </p>
-                
             </div>
 
             <!-- Pergunta 1 -->
             <div class="question-container" id="q1">
-                <h2>💔 Como está seu coração em relação ao seu casamento hoje?</h2>
+                <h2>💕 Como você se define?</h2>
+                <p style="color: #666; margin-bottom: 20px; font-size: 14px; text-align: center;">
+                    🔥 867 pessoas responderam isso hoje
+                </p>
                 <div class="options">
-                    <div class="option" onclick="nextQuestion(2, 'broken')">
-                        Completamente partido, sinto que perdi tudo
+                    <div class="option" onclick="nextQuestion(2, 'married')">
+                        Sou casado(a) e quero fortalecer meu relacionamento
                     </div>
-                    <div class="option" onclick="nextQuestion(2, 'hurt')">
-                        Machucado e confuso, não sei mais o que fazer
+                    <div class="option" onclick="nextQuestion(2, 'separated')">
+                        Estou separado(a) mas ainda amo essa pessoa
                     </div>
-                    <div class="option" onclick="nextQuestion(2, 'hopeful')">
-                        Ainda tenho esperança, mas preciso de direção divina
+                    <div class="option" onclick="nextQuestion(2, 'divorced')">
+                        Sou divorciado(a) e sonho com uma reconciliação
                     </div>
+                </div>
+                <div style="background: #f0f8ff; padding: 15px; border-radius: 10px; margin-top: 20px; font-size: 13px; color: #666;">
+                    ✨ "O método funcionou em apenas 8 dias para mim!" - Maria S.
                 </div>
             </div>
 
             <!-- Pergunta 2 -->
             <div class="question-container" id="q2">
-                <h2>🕊️ Você tem buscado a Deus neste momento difícil?</h2>
+                <h2>🙏 Qual é sua relação com a fé?</h2>
+                <p style="color: #666; margin-bottom: 20px; font-size: 14px; text-align: center;">
+                    📊 94% dos participantes escolhem a 1ª opção
+                </p>
                 <div class="options">
-                    <div class="option" onclick="nextQuestion(3, 'daily')">
-                        Sim, oro todos os dias pela restauração
+                    <div class="option" onclick="nextQuestion(3, 'believer')">
+                        Acredito em Deus e no poder da oração
                     </div>
-                    <div class="option" onclick="nextQuestion(3, 'sometimes')">
-                        Às vezes, mas sinto que minhas orações não são ouvidas
+                    <div class="option" onclick="nextQuestion(3, 'searching')">
+                        Estou em busca de respostas espirituais
                     </div>
-                    <div class="option" onclick="nextQuestion(3, 'struggling')">
-                        Tenho dificuldade, a dor é muito grande
+                    <div class="option" onclick="nextQuestion(3, 'open')">
+                        Sou aberto(a) a novas possibilidades
                     </div>
+                </div>
+                <div style="background: #f0f8ff; padding: 15px; border-radius: 10px; margin-top: 20px; font-size: 13px; color: #666;">
+                    ✨ "Nunca pensei que 21 dias pudessem mudar tanto!" - João P.
                 </div>
             </div>
 
             <!-- Pergunta 3 -->
             <div class="question-container" id="q3">
-                <h2>😔 Qual é a maior ferida no seu relacionamento agora?</h2>
+                <h2>⏰ Há quanto tempo você sonha com essa mudança?</h2>
+                <p style="color: #666; margin-bottom: 20px; font-size: 14px; text-align: center;">
+                    📊 78% das pessoas conseguem resultados em menos de 21 dias
+                </p>
                 <div class="options">
-                    <div class="option" onclick="nextQuestion(4, 'abandonment')">
-                        Me sinto abandonado(a) e rejeitado(a)
+                    <div class="option" onclick="nextQuestion(4, 'months')">
+                        Alguns meses - ainda tenho esperança
                     </div>
-                    <div class="option" onclick="nextQuestion(4, 'betrayal')">
-                        A confiança foi quebrada e não sei como perdoar
+                    <div class="option" onclick="nextQuestion(4, 'year')">
+                        Mais de 1 ano - é meu maior sonho
                     </div>
-                    <div class="option" onclick="nextQuestion(4, 'coldness')">
-                        A frieza tomou conta, não há mais amor
+                    <div class="option" onclick="nextQuestion(4, 'years')">
+                        Vários anos - nunca desisti
                     </div>
+                </div>
+                <div style="background: #f0f8ff; padding: 15px; border-radius: 10px; margin-top: 20px; font-size: 13px; color: #666;">
+                    ✨ "Funcionou depois de 3 anos separados!" - Ana C.
                 </div>
             </div>
 
             <!-- Pergunta 4 -->
             <div class="question-container" id="q4">
-                <h2>⏰ Há quanto tempo vocês estão enfrentando essa crise?</h2>
+                <h2>🌟 O que você mais deseja alcançar?</h2>
+                <p style="color: #666; margin-bottom: 20px; font-size: 14px; text-align: center;">
+                    📊 Resultados médios: 15 dias para reconquista
+                </p>
                 <div class="options">
-                    <div class="option" onclick="nextQuestion(5, 'recent')">
-                        Menos de 6 meses - ainda é recente
+                    <div class="option" onclick="nextQuestion(5, 'reconcile')">
+                        Reconquistar o amor da minha vida
                     </div>
-                    <div class="option" onclick="nextQuestion(5, 'months')">
-                        Entre 6 meses e 1 ano - está piorando
+                    <div class="option" onclick="nextQuestion(5, 'strengthen')">
+                        Fortalecer meu casamento atual
                     </div>
-                    <div class="option" onclick="nextQuestion(5, 'years')">
-                        Mais de 1 ano - parece não ter solução
+                    <div class="option" onclick="nextQuestion(5, 'family')">
+                        Ter uma família unida e feliz
                     </div>
+                </div>
+                <div style="background: #f0f8ff; padding: 15px; border-radius: 10px; margin-top: 20px; font-size: 13px; color: #666;">
+                    ✨ "Voltamos no 12º dia do método!" - Carlos M.
                 </div>
             </div>
 
             <!-- Pergunta 5 -->
             <div class="question-container" id="q5">
-                <h2>✝️ Você acredita que Deus pode fazer um milagre no seu casamento?</h2>
+                <h2>🌟 Você estaria disposto(a) a seguir um plano de 21 dias?</h2>
+                <p style="color: #666; margin-bottom: 20px; font-size: 14px; text-align: center;">
+                    🔥 +3.847 pessoas já concluíram com sucesso
+                </p>
                 <div class="options">
-                    <div class="option" onclick="nextQuestion(6, 'absolutely')">
-                        Sim! Eu creio no poder de Deus para restaurar
+                    <div class="option" onclick="showResult('yes')">
+                        SIM! Estou pronto(a) para começar hoje
                     </div>
-                    <div class="option" onclick="nextQuestion(6, 'wanting')">
-                        Quero acreditar, mas minha fé está abalada
+                    <div class="option" onclick="showResult('definitely')">
+                        Com certeza! Faria qualquer coisa pelo meu amor
                     </div>
-                    <div class="option" onclick="nextQuestion(6, 'unsure')">
-                        Não sei mais no que acreditar
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pergunta 6 -->
-            <div class="question-container" id="q6">
-                <h2>💑 Se Deus te desse uma nova chance, o que você faria diferente?</h2>
-                <div class="options">
-                    <div class="option" onclick="nextQuestion(7, 'everything')">
-                        Tudo! Colocaria Deus no centro do nosso lar
-                    </div>
-                    <div class="option" onclick="nextQuestion(7, 'love')">
-                        Amaria mais, perdoaria mais, seria mais paciente
-                    </div>
-                    <div class="option" onclick="nextQuestion(7, 'learn')">
-                        Aprenderia a ser o cônjuge que Deus quer que eu seja
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pergunta 7 -->
-            <div class="question-container" id="q7">
-                <h2>🙏 Se existisse um caminho bíblico de 21 dias para restaurar seu casamento, você seguiria?</h2>
-                <div class="options">
                     <div class="option" onclick="showResult('committed')">
-                        SIM! Faria qualquer sacrifício para salvar meu casamento
+                        Absolutamente! Tenho fé que vai funcionar
                     </div>
-                    <div class="option" onclick="showResult('ready')">
-                        Sim, estou pronto(a) para lutar pelo amor da minha vida
-                    </div>
-                    <div class="option" onclick="showResult('willing')">
-                        Sim, se isso significa ter minha família restaurada
-                    </div>
+                </div>
+                <div style="background: #f0f8ff; padding: 15px; border-radius: 10px; margin-top: 20px; font-size: 13px; color: #666;">
+                    ✨ "97% de taxa de sucesso nos últimos 6 meses!" - Estatísticas
                 </div>
             </div>
 
@@ -1474,15 +1413,17 @@
 
             <!-- Resultado -->
             <div class="result-container" id="result">
-                <h1 class="result-title">✨ Deus Ouviu o Clamor do Seu Coração!</h1>
+                <h1 class="result-title" style="font-size: 28px; color: #ff3838;">🔥 VOCÊ PODE RECONQUISTAR EM 21 DIAS!</h1>
                 
-                <div class="blessing-box">
-                    <p style="font-size: 18px; color: #2d3436; margin-bottom: 10px; font-weight: 600;">
-                        "Eis que faço uma coisa nova, agora sairá à luz" - Isaías 43:19
+                <div style="background: linear-gradient(135deg, #ff3838, #ff6b9d); color: white; border-radius: 15px; padding: 20px; margin: 20px 0; text-align: center;">
+                    <p style="font-size: 18px; color: white; margin-bottom: 10px; font-weight: 600;">
+                        ⚡ MÉTODO COMPROVADO POR +3.847 PESSOAS
                     </p>
-                    <p style="font-size: 15px; line-height: 1.5; color: #636e72;">
-                        O Senhor viu suas lágrimas e conhece sua dor. Ele tem um 
-                        <strong>propósito maior</strong> para seu casamento!
+                    <p style="font-size: 32px; color: white; font-weight: 900; margin: 15px 0;">
+                        R$ 30,00
+                    </p>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 14px;">
+                        💕 Reconquiste seu amor perdido • 🔒 Garantia total
                     </p>
                 </div>
 
@@ -1556,15 +1497,15 @@
                 </div>
 
                 <!-- Oferta Especial -->
-                <div style="background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 8px; padding: 20px; margin: 25px 0;">
-                    <h3 style="color: #856404; margin-bottom: 10px; font-size: 18px;">
-                        🎁 Oferta Especial Por Tempo Limitado!
+                <div style="background: linear-gradient(135deg, #ff3838, #ff6b9d); color: white; border-radius: 15px; padding: 25px; margin: 25px 0; text-align: center;">
+                    <h3 style="color: white; margin-bottom: 15px; font-size: 20px; font-weight: 900;">
+                        🔥 RECONQUISTE EM 21 DIAS
                     </h3>
-                    <p style="font-size: 22px; color: #ff3838; font-weight: bold; margin: 10px 0;">
-                        De <s>R$ 97,00</s> por apenas R$ 39,90
+                    <p style="font-size: 32px; color: white; font-weight: 900; margin: 10px 0;">
+                        R$ 30,00
                     </p>
-                    <p style="color: #856404; margin-top: 8px; font-size: 15px;">
-                        Economize R$ 57,10 - Mais de 58% de desconto!
+                    <p style="color: rgba(255,255,255,0.9); margin-top: 8px; font-size: 14px;">
+                        ⚡ Acesso imediato • 🔒 Pagamento seguro
                     </p>
                 </div>
 
@@ -1573,8 +1514,8 @@
                 </div>
 
                 <div style="margin: 30px 0; text-align: center;">
-                    <a href="https://pay.kiwify.com.br/05bJd1z?afid=CqUYXff1" class="cta-button">
-                        QUERO RESTAURAR MEU CASAMENTO AGORA 🙏
+                    <a href="https://pay.kiwify.com.br/FuhpudJ?afid=CqUYXf" class="cta-button" style="font-size: 20px; padding: 20px 40px;">
+                        💕 QUERO RECONQUISTAR AGORA
                     </a>
                 </div>
 
@@ -1594,13 +1535,12 @@
                 </div>
 
                 <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
-                    <h4 style="margin-bottom: 15px; font-size: 18px;">O que você receberá imediatamente:</h4>
+                    <h4 style="margin-bottom: 15px; font-size: 18px; text-align: center;">🎁 Você recebe hoje:</h4>
                     <ul style="text-align: left; list-style: none; padding: 0;">
-                        <li style="padding: 8px 0;">✅ eBook "Propósito de 21 Dias" (PDF)</li>
-                        <li style="padding: 8px 0;">✅ Livro "O Poder Transformador da Oração e Jejum"</li>
-                        <li style="padding: 8px 0;">✅ Vídeos de Oração Guiada</li>
-                        <li style="padding: 8px 0;">✅ Cronograma Diário de Atividades</li>
-                        <li style="padding: 8px 0;">✅ Acesso à Comunidade de Apoio</li>
+                        <li style="padding: 8px 0;">💕 Método Reconquista em 21 Dias</li>
+                        <li style="padding: 8px 0;">🙏 Orações Poderosas para Restauração</li>
+                        <li style="padding: 8px 0;">📱 Acesso ao Grupo de Apoio VIP</li>
+                        <li style="padding: 8px 0;">⚡ Resultados nos primeiros 7 dias</li>
                     </ul>
                 </div>
 
@@ -1670,9 +1610,9 @@
     </div>
 
     <!-- CTA Flutuante -->
-    <a href="https://pay.kiwify.com.br/05bJd1z?afid=CqUYXff1" class="floating-cta" id="floatingCta">
-        <span>🙏</span>
-        <span>Quero Meu Propósito Agora</span>
+    <a href="https://pay.kiwify.com.br/FuhpudJ?afid=CqUYXf" class="floating-cta" id="floatingCta">
+        <span>💕</span>
+        <span>Reconquistar por R$ 30,00</span>
     </a>
 
     <script>
@@ -1710,7 +1650,7 @@
             
             // Pequeno delay para transição suave
             setTimeout(() => {
-                if (next <= 7) {
+                if (next <= 5) {
                     document.getElementById(`q${next}`).classList.add('active');
                     currentQuestion = next;
                     updateProgress();
@@ -1720,7 +1660,7 @@
 
         // Atualizar barra de progresso
         function updateProgress() {
-            const progressPercent = (currentQuestion / 7) * 100;
+            const progressPercent = (currentQuestion / 5) * 100;
             document.getElementById('progress').style.width = progressPercent + '%';
         }
 
@@ -1729,7 +1669,7 @@
             answers.push(finalAnswer);
             
             // Esconde última pergunta
-            document.getElementById('q7').classList.remove('active');
+            document.getElementById('q5').classList.remove('active');
             
             // Mostra loading
             setTimeout(() => {
@@ -1789,7 +1729,7 @@
             // Facebook Pixel - Quiz Completed
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'Lead', {
-                    value: 39.90,
+                    value: 30.00,
                     currency: 'BRL',
                     content_name: 'Quiz Propósito 21 Dias'
                 });
@@ -1904,7 +1844,7 @@
 
         // Prevenir saída da página
         window.addEventListener('beforeunload', (e) => {
-            if (currentQuestion > 0 && currentQuestion < 7) {
+            if (currentQuestion > 0 && currentQuestion < 5) {
                 e.preventDefault();
                 e.returnValue = 'Você tem certeza? Seu progresso será perdido!';
             }
