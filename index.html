@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="theme-color" content="#ff6b9d">
+    <meta name="theme-color" content="#667eea">
     <meta name="description" content="Descubra o propósito de Deus para restaurar seu casamento em 21 dias. Junte-se a mais de 3.847 casais transformados.">
     <title>Quiz Divino: Deus Tem um Propósito Para Seu Casamento</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Meta Pixel Code -->
     <script>
@@ -37,28 +42,59 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(180deg, #fff5f7 0%, #ffeef2 50%, #fff 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             min-height: 100vh;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
         }
 
         /* Partículas removidas para melhor performance mobile */
 
         /* Container Principal */
         .main-container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 15px;
+            padding: 20px;
             position: relative;
             z-index: 10;
         }
 
         @media (max-width: 480px) {
             .main-container {
-                padding: 10px;
+                padding: 15px;
+            }
+        }
+        
+        /* Touch improvements for mobile */
+        @media (max-width: 768px) {
+            .option {
+                min-height: 60px;
+                display: flex;
+                align-items: center;
+                touch-action: manipulation;
+            }
+            
+            .cta-button, .start-btn {
+                min-height: 56px;
+                touch-action: manipulation;
             }
         }
 
@@ -101,18 +137,25 @@
 
         /* Quiz Container */
         .quiz-container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            box-shadow: 
+                0 20px 60px rgba(0,0,0,0.1),
+                0 8px 32px rgba(120, 119, 198, 0.2),
+                inset 0 1px 0 rgba(255,255,255,0.8);
+            padding: 40px;
             position: relative;
             overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.2);
+            z-index: 10;
         }
 
         @media (max-width: 480px) {
             .quiz-container {
-                padding: 20px 15px;
-                border-radius: 15px;
+                padding: 24px 20px;
+                border-radius: 20px;
+                margin: 10px;
             }
         }
 
@@ -138,13 +181,14 @@
         }
 
         .progress {
-            background: linear-gradient(90deg, #ff6b9d, #ffd93d);
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
             height: 100%;
             width: 0%;
             border-radius: 20px;
             transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
         }
 
         .progress::after {
@@ -196,11 +240,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            font-size: 14px;
-            color: #666;
+            gap: 12px;
+            margin-bottom: 28px;
+            font-size: 15px;
+            color: #4a5568;
             animation: fadeIn 1s ease;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .pulse-dot {
@@ -234,21 +283,23 @@
 
         /* Barra de Urgência */
         .urgency-bar {
-            background: #fff3cd;
-            border-left: 4px solid #ff3838;
-            border-radius: 8px;
-            padding: 12px 15px;
-            margin: 20px 0;
+            background: linear-gradient(135deg, #fed7d7 0%, #feb2b2 100%);
+            border-left: 5px solid #e53e3e;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 24px 0;
             position: relative;
-            box-shadow: 0 2px 8px rgba(255,56,56,0.1);
+            box-shadow: 
+                0 4px 12px rgba(229, 62, 62, 0.15),
+                0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
         .urgency-bar p {
             margin: 0;
             text-align: center;
-            color: #d73502;
-            font-weight: 600;
-            font-size: 15px;
+            color: #c53030;
+            font-weight: 700;
+            font-size: 16px;
         }
 
         @media (max-width: 480px) {
@@ -259,68 +310,86 @@
 
         /* Tipografia Aprimorada */
         h1 {
-            font-size: 26px;
-            color: #2d3436;
-            margin-bottom: 18px;
+            font-size: 32px;
+            color: #1a202c;
+            margin-bottom: 24px;
             text-align: center;
-            line-height: 1.35;
-            font-weight: 700;
+            line-height: 1.3;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 20px;
-                margin-bottom: 15px;
-                line-height: 1.3;
+                font-size: 24px;
+                margin-bottom: 20px;
+                line-height: 1.25;
+                padding: 0 10px;
             }
         }
 
         h2 {
-            font-size: 24px;
-            color: #2d3436;
-            margin-bottom: 25px;
-            line-height: 1.4;
-            font-weight: 600;
+            font-size: 28px;
+            color: #1a202c;
+            margin-bottom: 30px;
+            line-height: 1.3;
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: -0.3px;
         }
 
         @media (max-width: 480px) {
             h2 {
-                font-size: 20px;
-                margin-bottom: 20px;
+                font-size: 22px;
+                margin-bottom: 24px;
+                padding: 0 5px;
             }
         }
 
         .subtitle {
-            color: #636e72;
-            font-size: 16px;
+            color: #4a5568;
+            font-size: 18px;
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 32px;
             line-height: 1.6;
+            font-weight: 500;
         }
 
         @media (max-width: 480px) {
             .subtitle {
-                font-size: 14px;
-                margin-bottom: 20px;
+                font-size: 16px;
+                margin-bottom: 28px;
+                padding: 0 10px;
             }
         }
 
         .divine-message {
-            background: #f8f9fa;
-            border-left: 4px solid #ff6b9d;
-            padding: 18px;
-            margin: 20px 0;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%);
+            border-left: 5px solid #38b2ac;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 16px;
             font-style: italic;
-            color: #2d3436;
-            font-size: 15px;
+            color: #1a202c;
+            font-size: 16px;
+            box-shadow: 
+                0 4px 12px rgba(56, 178, 172, 0.1),
+                0 2px 6px rgba(0, 0, 0, 0.05);
+            font-weight: 500;
+            line-height: 1.6;
         }
 
         @media (max-width: 480px) {
             .divine-message {
-                padding: 15px;
-                margin: 15px 0;
+                padding: 20px;
+                margin: 24px 0;
+                font-size: 15px;
+            }
+            
+            .social-indicator {
+                padding: 10px 16px;
                 font-size: 14px;
+                margin-bottom: 24px;
             }
         }
 
@@ -328,53 +397,60 @@
         .options {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 16px;
+            margin-top: 24px;
         }
 
         .option {
-            background: #f8f9fa;
-            border: 3px solid transparent;
-            padding: 18px 20px;
-            border-radius: 12px;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border: 2px solid #e2e8f0;
+            padding: 20px 24px;
+            border-radius: 16px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 17px;
             line-height: 1.5;
             position: relative;
             overflow: hidden;
             -webkit-tap-highlight-color: transparent;
             user-select: none;
+            font-weight: 500;
+            color: #2d3748;
         }
 
         @media (max-width: 480px) {
             .option {
-                padding: 15px;
-                font-size: 15px;
+                padding: 18px 20px;
+                font-size: 16px;
+                margin-bottom: 12px;
             }
         }
 
         .option:hover {
-            background: #fff;
-            border-color: #ff6b9d;
-            transform: translateX(2px);
-            box-shadow: 0 5px 15px rgba(255,107,157,0.15);
+            background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 
+                0 8px 25px rgba(102, 126, 234, 0.15),
+                0 3px 10px rgba(0, 0, 0, 0.1);
         }
 
         .option::before {
-            content: '→';
+            content: '✨';
             position: absolute;
-            right: 20px;
+            right: 24px;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 18px;
-            color: #ff6b9d;
+            font-size: 20px;
+            color: #667eea;
             opacity: 0;
             transition: all 0.3s ease;
         }
 
         .option:hover::before {
             opacity: 1;
-            right: 15px;
+            right: 20px;
+            transform: translateY(-50%) scale(1.1);
         }
 
         @media (max-width: 480px) {
@@ -390,24 +466,27 @@
 
         /* Botões CTA Aprimorados */
         .cta-button, .start-btn {
-            background: linear-gradient(135deg, #ff6b9d, #ff8787);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             color: white;
             border: none;
-            padding: 18px 40px;
+            padding: 20px 48px;
             font-size: 18px;
-            border-radius: 50px;
+            border-radius: 60px;
             cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0 10px 30px rgba(255,107,157,0.3);
-            transition: all 0.3s ease;
+            font-weight: 700;
+            box-shadow: 
+                0 12px 40px rgba(102, 126, 234, 0.3),
+                0 4px 16px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-block;
             text-decoration: none;
             position: relative;
             overflow: hidden;
             -webkit-tap-highlight-color: transparent;
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
             margin: 0 auto;
+            letter-spacing: 0.5px;
         }
 
         .start-btn.main-cta {
@@ -436,20 +515,22 @@
 
         @media (max-width: 480px) {
             .cta-button, .start-btn {
-                padding: 16px 30px;
-                font-size: 16px;
+                padding: 18px 32px;
+                font-size: 17px;
+                margin: 20px 10px;
             }
             
             .start-btn.main-cta {
-                padding: 18px 30px;
+                padding: 20px 32px;
+                font-size: 18px;
             }
             
             .cta-text {
-                font-size: 17px;
+                font-size: 18px;
             }
             
             .cta-subtext {
-                font-size: 13px;
+                font-size: 14px;
             }
         }
 
@@ -533,8 +614,10 @@
         }
 
         .cta-button:hover, .start-btn:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(255,107,157,0.4);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 
+                0 16px 50px rgba(102, 126, 234, 0.4),
+                0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
         .start-btn:active {
@@ -1032,12 +1115,16 @@
         /* Touch feedback para mobile */
         @media (hover: none) {
             .option:active {
-                background: #e9ecef;
+                background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e0 100%);
                 transform: scale(0.98);
+                border-color: #667eea;
             }
             
             .cta-button:active, .start-btn:active {
-                transform: scale(0.98);
+                transform: scale(0.96);
+                box-shadow: 
+                    0 8px 25px rgba(102, 126, 234, 0.3),
+                    0 3px 10px rgba(0, 0, 0, 0.2);
             }
         }
 
@@ -1270,7 +1357,7 @@
             <!-- Tela Inicial Simplificada -->
             <div class="question-container active" id="intro">
                 <!-- Hook Forte -->
-                <h1 style="font-size: 28px; color: #ff3838; margin-bottom: 15px; font-weight: 900;">⚡ RECONQUISTE SEU AMOR EM 21 DIAS</h1>
+                <h1 style="font-size: 28px; color: #ff3838; margin-bottom: 15px; font-weight: 900;">✨ DEUS TROUXE VOCÊ ATÉ AQUI POR UM PROPÓSITO</h1>
                 
                 <!-- Social Proof Rápida -->
                 <div class="social-indicator">
@@ -1280,12 +1367,12 @@
 
                 <!-- Promessa Clara -->
                 <p class="subtitle" style="font-size: 18px; font-weight: 600; color: #2d3436; margin-bottom: 25px;">
-                    Descubra em 5 perguntas rápidas se você pode reconquistar seu amor perdido com o método que já salvou <strong>3.847 casamentos</strong>.
+                    Não é coincidência você estar aqui. Descubra em 5 perguntas como <strong>você e seu cônjuge podem se reconciliar com Deus</strong> e restaurar seu casamento - o mesmo caminho que já salvou <strong>3.847 casamentos</strong>.
                 </p>
 
                 <!-- CTA Principal -->
                 <button class="start-btn main-cta pulse-animation" onclick="startQuiz()" style="font-size: 22px; padding: 20px 40px;">
-                    <span class="cta-text">🙏 INICIAR TESTE GRATUITO</span>
+                    <span class="cta-text">🙏 RESTAURAR MEU CASAMENTO COM DEUS</span>
                 </button>
 
                 <p style="margin-top: 12px; color: #666; font-size: 13px; text-align: center;">
@@ -1301,17 +1388,17 @@
                 </p>
                 <div class="options">
                     <div class="option" onclick="nextQuestion(2, 'married')">
-                        Sou casado(a) e quero fortalecer meu relacionamento
+                        Sou casado(a) e quero que Deus fortaleça meu relacionamento
                     </div>
                     <div class="option" onclick="nextQuestion(2, 'separated')">
-                        Estou separado(a) mas ainda amo essa pessoa
+                        Estou separado(a) e creio que Deus pode restaurar
                     </div>
                     <div class="option" onclick="nextQuestion(2, 'divorced')">
-                        Sou divorciado(a) e sonho com uma reconciliação
+                        Sou divorciado(a) e tenho fé na restauração divina
                     </div>
                 </div>
                 <div style="background: #f0f8ff; padding: 15px; border-radius: 10px; margin-top: 20px; font-size: 13px; color: #666;">
-                    ✨ "O método funcionou em apenas 8 dias para mim!" - Maria S.
+                    ✨ "Deus usou este propósito para restaurar minha família em 8 dias. Glória a Ele!" - Maria S.
                 </div>
             </div>
 
@@ -1333,7 +1420,7 @@
                     </div>
                 </div>
                 <div style="background: #f0f8ff; padding: 15px; border-radius: 10px; margin-top: 20px; font-size: 13px; color: #666;">
-                    ✨ "Nunca pensei que 21 dias pudessem mudar tanto!" - João P.
+                    ✨ "Senti a presença de Deus guiando cada passo. Minha vida mudou completamente!" - João P.
                 </div>
             </div>
 
@@ -1345,17 +1432,17 @@
                 </p>
                 <div class="options">
                     <div class="option" onclick="nextQuestion(4, 'months')">
-                        Alguns meses - ainda tenho esperança
+                        Alguns meses - minha fé permanece firme
                     </div>
                     <div class="option" onclick="nextQuestion(4, 'year')">
-                        Mais de 1 ano - é meu maior sonho
+                        Mais de 1 ano - confio no tempo de Deus
                     </div>
                     <div class="option" onclick="nextQuestion(4, 'years')">
-                        Vários anos - nunca desisti
+                        Vários anos - Deus é fiel em Suas promessas
                     </div>
                 </div>
                 <div style="background: #f0f8ff; padding: 15px; border-radius: 10px; margin-top: 20px; font-size: 13px; color: #666;">
-                    ✨ "Funcionou depois de 3 anos separados!" - Ana C.
+                    ✨ "Depois de 3 anos orando, Deus finalmente respondeu. Estamos juntos novamente!" - Ana C.
                 </div>
             </div>
 
@@ -1367,17 +1454,17 @@
                 </p>
                 <div class="options">
                     <div class="option" onclick="nextQuestion(5, 'reconcile')">
-                        Reconquistar o amor da minha vida
+                        Ver Deus restaurar o amor da minha vida
                     </div>
                     <div class="option" onclick="nextQuestion(5, 'strengthen')">
-                        Fortalecer meu casamento atual
+                        Ver Deus fortalecer meu casamento atual
                     </div>
                     <div class="option" onclick="nextQuestion(5, 'family')">
-                        Ter uma família unida e feliz
+                        Ver Deus unir minha família em amor
                     </div>
                 </div>
                 <div style="background: #f0f8ff; padding: 15px; border-radius: 10px; margin-top: 20px; font-size: 13px; color: #666;">
-                    ✨ "Voltamos no 12º dia do método!" - Carlos M.
+                    ✨ "No 12º dia, senti que Deus tocou o coração dela. Voltamos para sempre!" - Carlos M.
                 </div>
             </div>
 
@@ -1389,13 +1476,13 @@
                 </p>
                 <div class="options">
                     <div class="option" onclick="showResult('yes')">
-                        SIM! Estou pronto(a) para começar hoje
+                        SIM! Creio que Deus vai agir em minha vida
                     </div>
                     <div class="option" onclick="showResult('definitely')">
-                        Com certeza! Faria qualquer coisa pelo meu amor
+                        Com certeza! Tenho fé na restauração divina
                     </div>
                     <div class="option" onclick="showResult('committed')">
-                        Absolutamente! Tenho fé que vai funcionar
+                        Absolutamente! Confio nos planos de Deus
                     </div>
                 </div>
                 <div style="background: #f0f8ff; padding: 15px; border-radius: 10px; margin-top: 20px; font-size: 13px; color: #666;">
@@ -1406,22 +1493,22 @@
             <!-- Loading Divino -->
             <div class="loading-divine" id="loading">
                 <div class="loading-hands">🙏</div>
-                <p class="loading-text">Deus está preparando uma palavra especial para você...</p>
+                <p class="loading-text">O Espírito Santo está revelando o propósito divino para sua vida...</p>
             </div>
 
             <!-- Resultado -->
             <div class="result-container" id="result">
-                <h1 class="result-title" style="font-size: 28px; color: #ff3838;">🔥 VOCÊ PODE RECONQUISTAR EM 21 DIAS!</h1>
+                <h1 class="result-title" style="font-size: 28px; color: #ff3838;">✨ DEUS QUER RESTAURAR SEU CASAMENTO</h1>
                 
                 <div style="background: linear-gradient(135deg, #ff3838, #ff6b9d); color: white; border-radius: 15px; padding: 20px; margin: 20px 0; text-align: center;">
                     <p style="font-size: 18px; color: white; margin-bottom: 10px; font-weight: 600;">
-                        ⚡ MÉTODO COMPROVADO POR +3.847 PESSOAS
+                        🙏 O CAMINHO PARA RECONCILIAR SEU CASAMENTO COM DEUS
                     </p>
                     <p style="font-size: 32px; color: white; font-weight: 900; margin: 15px 0;">
                         R$ 30,00
                     </p>
                     <p style="color: rgba(255,255,255,0.9); font-size: 14px;">
-                        💕 Reconquiste seu amor perdido • 🔒 Garantia total
+                        ❤️ Reconecte-se com Deus e seu cônjuge • 🔒 Casamento restaurado
                     </p>
                 </div>
 
@@ -1510,7 +1597,7 @@
                     <div class="counter-bar">
                         <div class="counter-fill" style="width: 85%;"></div>
                     </div>
-                    <p class="counter-warning">⚠️ Restam apenas 23 vagas com desconto!</p>
+                    <p class="counter-warning">⚠️ ÚLTIMA CHANCE! Deus está movendo corações HOJE! Restam apenas 23 vagas!</p>
                 </div>
 
                 <!-- WhatsApp Proof -->
@@ -1520,14 +1607,14 @@
                         <span>Grupo Propósito de 21 Dias - 367 participantes ativos</span>
                     </div>
                     <p style="color: #075e54;">
-                        "Todas nós com fé em Deus 🙏" - Mensagem mais recente
+                        "Deus está fazendo milagres em nossas vidas! 🙏✨" - Mensagem mais recente
                     </p>
                 </div>
 
                 <!-- Oferta Especial -->
                 <div style="background: linear-gradient(135deg, #ff3838, #ff6b9d); color: white; border-radius: 15px; padding: 25px; margin: 25px 0; text-align: center;">
                     <h3 style="color: white; margin-bottom: 15px; font-size: 20px; font-weight: 900;">
-                        🔥 RECONQUISTE EM 21 DIAS
+                        💒 RECONSTRUA SEU CASAMENTO COM DEUS
                     </h3>
                     <p style="font-size: 32px; color: white; font-weight: 900; margin: 10px 0;">
                         R$ 30,00
@@ -1538,12 +1625,12 @@
                 </div>
 
                 <div class="urgency-timer" id="timer">
-                    ⏰ Oferta termina em: 09:47
+                    ⏰ DEUS ESTÁ AGINDO AGORA! Oferta termina em: 09:47
                 </div>
 
                 <div style="margin: 30px 0; text-align: center;">
                     <a href="https://pay.kiwify.com.br/FuhpudJ?afid=CqUYXf" class="cta-button" style="font-size: 20px; padding: 20px 40px;">
-                        💕 QUERO RECONQUISTAR AGORA
+                        💒 RESTAURAR MEU CASAMENTO COM DEUS
                     </a>
                 </div>
 
@@ -1565,8 +1652,8 @@
                 <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
                     <h4 style="margin-bottom: 15px; font-size: 18px; text-align: center;">🎁 Você recebe hoje:</h4>
                     <ul style="text-align: left; list-style: none; padding: 0;">
-                        <li style="padding: 8px 0;">💕 Método Reconquista em 21 Dias</li>
-                        <li style="padding: 8px 0;">🙏 Orações Poderosas para Restauração</li>
+                        <li style="padding: 8px 0;">💒 Jornada de Reconciliação do Casal com Deus</li>
+                        <li style="padding: 8px 0;">🙏 Orações Poderosas para Restauração do Casamento</li>
                         <li style="padding: 8px 0;">📱 Acesso ao Grupo de Apoio VIP</li>
                         <li style="padding: 8px 0;">⚡ Resultados nos primeiros 7 dias</li>
                     </ul>
@@ -1574,20 +1661,20 @@
 
                 <div class="action-steps">
                     <h3 style="margin: 30px 0 20px; color: #ff6b9d;">
-                        🎯 Próximos Passos Para Sua Restauração:
+                        💒 Como Deus Vai Restaurar Seu Casamento:
                     </h3>
                     <div class="steps-grid">
                         <div class="step-card">
                             <div class="step-number">1</div>
-                            <p>Clique no botão abaixo e garanta seu acesso</p>
+                            <p>Aceite o plano de Deus para restaurar seu casamento</p>
                         </div>
                         <div class="step-card">
                             <div class="step-number">2</div>
-                            <p>Receba todo o material em seu email instantaneamente</p>
+                            <p>Receba o guia de reconciliação matrimonial com Deus</p>
                         </div>
                         <div class="step-card">
                             <div class="step-number">3</div>
-                            <p>Comece hoje mesmo sua jornada de 21 dias com Deus</p>
+                            <p>Permita que Deus una vocês novamente em amor
                         </div>
                     </div>
                 </div>
@@ -1614,7 +1701,7 @@
                                 <span class="faq-arrow" id="arrow2">▼</span>
                             </div>
                             <div class="faq-answer" id="faq2">
-                                O propósito foi criado para ser feito individualmente. Deus trabalha primeiro em você!
+                                Este método funciona quando um dos cônjuges se reconcilia com Deus primeiro. Ele irá tocar o coração do seu parceiro através de você.
                             </div>
                         </div>
                         
@@ -1631,7 +1718,7 @@
                 </div>
 
                 <div class="divine-message" style="margin-top: 30px; text-align: center;">
-                    "Tudo posso naquele que me fortalece" - Filipenses 4:13
+                    "Porque sou eu que conheço os planos que tenho para vocês, diz o Senhor, planos de fazê-los prosperar e não de causar dano, planos de dar-lhes esperança e um futuro." - Jeremias 29:11
                 </div>
             </div>
         </div>
@@ -1640,7 +1727,7 @@
     <!-- CTA Flutuante -->
     <a href="https://pay.kiwify.com.br/FuhpudJ?afid=CqUYXf" class="floating-cta" id="floatingCta">
         <span>💕</span>
-        <span>Reconquistar por R$ 30,00</span>
+        <span>💒 Restaurar Casamento</span>
     </a>
 
     <script>
@@ -1731,11 +1818,11 @@
                 
                 if (minutes < 0) {
                     clearInterval(timerInterval);
-                    document.getElementById('timer').innerHTML = '⏰ Oferta expirada!';
+                    document.getElementById('timer').innerHTML = '⏰ O momento de Deus passou!';
                     return;
                 }
                 
-                const formattedTime = `⏰ Oferta termina em: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                const formattedTime = `⏰ DEUS ESTÁ AGINDO AGORA! Oferta termina em: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
                 document.getElementById('timer').innerHTML = formattedTime;
                 
                 // Piscar quando restam menos de 2 minutos
@@ -1793,7 +1880,7 @@
                     const remaining = 150 - currentCount;
                     const warning = document.querySelector('.counter-warning');
                     if (warning) {
-                        warning.textContent = `⚠️ Restam apenas ${remaining} vagas com desconto!`;
+                        warning.textContent = `⚠️ ÚLTIMA CHANCE! Deus está movendo corações HOJE! Restam apenas ${remaining} vagas!`;
                     }
                 }
             }, 10000);
